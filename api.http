@@ -1,0 +1,36 @@
+# ROTA CREATE EVENTS
+POST http://localhost:3333/events
+Content-Type: application/json
+{
+    "title": "Novo Evento",
+    "details": null,
+    "maximumAttendees": 50
+}
+
+###
+
+POST http://localhost:3333/events/a4b6d7ed-0ffb-47db-a353-e672a6514510/attendees
+Content-Type: application/json
+{
+    "name": "Douglas Lincoln",
+    "email": "douglas@gmail.com"
+}
+
+###
+GET http://localhost:3333/events/2fef74e8-fdfd-4571-9d8b-2315cf1efb7e
+
+###
+
+GET http://localhost:3333/attendees/1/badge
+
+###
+
+GET http://localhost:3333/attendees/4/check-in
+
+###
+
+GET http://localhost:3333/events/2fef74e8-fdfd-4571-9d8b-2315cf1efb7e/attendees
+
+###
+
+GET http://localhost:3333/events/2fef74e8-fdfd-4571-9d8b-2315cf1efb7e/attendees?query=Douglas
